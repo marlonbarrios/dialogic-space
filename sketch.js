@@ -10,7 +10,8 @@ let xoff3 = 700;
 let roff1 = 200;
 let roff2 = 400;
 let roff3 = 500;
-
+let x;
+let y;
 let slider; // Declare the slider globally
 let textSizeT = 32; // Text size for the title
 // Variables for the scrolling text
@@ -54,6 +55,7 @@ function draw() {
   xoff3 += speed;
   roff3 += speed;
 
+
   // Calculate positions and sizes for all circles
   let y1 = noise(yoff1) * height;
   let x1 = noise(xoff1) * width;
@@ -73,10 +75,13 @@ function draw() {
 
   // Draw the background circle first
   fill(27, 73, 101);
-  ellipse(width / 2, height / 2, maxSize, maxSize);
+  let x =mouseX;
+  let y =mouseY;
+  ellipse(x, y , maxSize, maxSize);
   textSize(32);
   fill(255);
-  text("Dialogic Space", width / 2, height / 2);
+  text("Dialogic Space", x, y);
+  noCursor();
 
   // Draw lines between circles if they are close enough
   stroke(255, 255, 255);
@@ -118,3 +123,4 @@ function checkAndDrawLine(x1, y1, x2, y2) {
     line(x1, y1, x2, y2); // Draw a line between the points if the condition is true
   }
 }
+
