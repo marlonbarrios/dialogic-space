@@ -77,10 +77,10 @@ function draw() {
   fill(27, 73, 101);
   let x =mouseX;
   let y =mouseY;
-  ellipse(x, y , maxSize, maxSize);
+  ellipse(width/2, height/2 , width/3, height/3);
   textSize(32);
   fill(255);
-  text("Dialogic Space", x, y);
+  text("Dialogic Space", width/2, height/2);
   noCursor();
 
   // Draw lines between circles if they are close enough
@@ -103,7 +103,7 @@ function draw() {
   fill(250);
   textSize(16);
   textAlign(CENTER, CENTER);
-  text("Dance Learning Reflexions", x1, y1);
+  text("Dance Learning Reflections", x1, y1);
   text("Multi-sensory and Embodied Modalities", x2, y2);
   text("Co-Participation in Research", x3, y3);
 
